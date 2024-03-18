@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Metadata Remover",
+  "version": "1.0",
+  "description": "Download images without original metadata.",
+  "permissions": ["contextMenus", "downloads", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
